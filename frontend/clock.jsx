@@ -27,13 +27,13 @@ class Clock extends React.Component {
 
     return (
       <div>
-        <h1>In Clock!</h1>
 
         <div className="clock">
           <ul>
-            <li>{date.getHours() % 12}</li>
-            <li>{date.getMinutes()}</li>
-            <li>{date.getSeconds()}</li>
+            <li>Clock</li>
+            <li>Hours: {date.getHours() % 12}</li>
+            <li>Minutes: {date.getMinutes()}</li>
+            <li>Seconds: {date.getSeconds()}</li>
           </ul>
 
         </div>

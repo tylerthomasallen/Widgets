@@ -10,21 +10,31 @@ class Tabs extends React.Component {
     };
   }
 
-  
+  handleClick(idx) {
+    this.setState({currentTab: idx});
+
+  }
+
+  handleClass(idx) {
+    return idx === this.state.currentTab ? 'active' : '';
+  }
+
+
   render () {
     const { content } = this.props;
 
 
+
     return (
       <div className="tabs">
-        <h1>Tabs</h1>
 
         <div className="tabs-header">
           <ul>
             {content.map((el, idx) => {
               return <li
                 key={idx}
-                onClick={() => this.setState({currentTab: idx})}
+                onClick={() => this.handleClick(idx)}
+                className={this.handleClass(idx)}
                 >{el.title}</li>;
             })}
           </ul>

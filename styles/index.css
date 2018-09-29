@@ -29,6 +29,8 @@ body {
   background-color: red;
   font-family: 'Kodchasan', sans-serif;
   font-size: 24px;
+	display: flex;
+	justify-content: center;
 }
 
 .clock {
@@ -44,6 +46,46 @@ body {
   border: 1px solid black;
   background-color: white;
   border-radius: 30px;
+}
+
+.tabs {
+	margin: 50px;
+	background-color: white;
+	border: 1px solid	black;
+	border-radius: 10px;
+}
+
+.tabs-header ul {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.tabs-header ul li {
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid black;
+}
+
+.tabs-header ul li {
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid black;
+}
+
+.tabs-header ul li:hover {
+	background-color: #F3E1E1;
+}
+
+.tabs-content {
+	min-height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.active {
+	font-weight: bold;
+	font-size: 26px;
 }
 
 .clock ul li {

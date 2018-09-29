@@ -241,6 +241,18 @@ function (_React$Component) {
   }
 
   _createClass(Tabs, [{
+    key: "handleClick",
+    value: function handleClick(idx) {
+      this.setState({
+        currentTab: idx
+      });
+    }
+  }, {
+    key: "handleClass",
+    value: function handleClass(idx) {
+      return idx === this.state.currentTab ? 'active' : '';
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -248,16 +260,15 @@ function (_React$Component) {
       var content = this.props.content;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "tabs"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Tabs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "tabs-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, content.map(function (el, idx) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           key: idx,
           onClick: function onClick() {
-            return _this2.setState({
-              currentTab: idx
-            });
-          }
+            return _this2.handleClick(idx);
+          },
+          className: _this2.handleClass(idx)
         }, el.title);
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "tabs-content"

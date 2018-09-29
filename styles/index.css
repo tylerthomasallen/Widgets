@@ -83,6 +83,22 @@ body {
 	align-items: center;
 }
 
+.weather {
+	display: flex;
+	justify-content: center;
+	background-color: white;
+	border-radius: 30px;
+}
+
+.weather ul {
+	display: flex;
+	justify-content: center;
+}
+
+.weather ul li {
+	padding: 20px;
+}
+
 .active {
 	font-weight: bold;
 	font-size: 26px;

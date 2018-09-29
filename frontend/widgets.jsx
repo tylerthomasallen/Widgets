@@ -1,6 +1,7 @@
 import React from 'react';
 import Clock from './clock';
 import Tabs from './tabs';
+import Weather from './weather';
 
 class Widgets extends React.Component {
 
@@ -17,6 +18,7 @@ class Widgets extends React.Component {
       <div>
         <Clock />
         <Tabs content={tabs}/>
+        <Weather />
       </div>
     );
   }

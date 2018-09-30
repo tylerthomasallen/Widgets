@@ -2,11 +2,14 @@ import React from 'react';
 import Clock from './clock';
 import Tabs from './tabs';
 import Weather from './weather';
+import AutoComplete from './autocomplete';
 
 class Widgets extends React.Component {
 
 
   render() {
+
+    const names = ['tyler', 'logan', 'quinn', 'lynn', 'tim', 'tom', 'ginna', 'katie'];
 
     const tabs = [
       { title: 'One', content: 'First tab'},
@@ -19,6 +22,7 @@ class Widgets extends React.Component {
         <Clock />
         <Tabs content={tabs}/>
         <Weather />
+        <AutoComplete names={names}/>
       </div>
     );
   }
